@@ -4,13 +4,13 @@
 
     <groupId>cn.yusiwen</groupId>
     <artifactId>maven-build-helper</artifactId>
-    <version>1.1</version>
+    <version>1.2-SNAPSHOT</version>
 
     <scm>
         <connection>scm:git:ssh://git@github.com/yusiwen/maven-build-helper.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/yusiwen/maven-build-helper.git</developerConnection>
         <url>https://github.com/yusiwen/maven-build-helper</url>
-        <tag>maven-build-helper-1.1</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <issueManagement>
