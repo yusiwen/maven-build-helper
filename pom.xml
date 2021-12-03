@@ -9,8 +9,8 @@
     <version>1.0-SNAPSHOT</version>
 
     <scm>
-        <connection>scm:git:ssh://git@github.com:yusiwen/maven-build-helper.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com:yusiwen/maven-build-helper.git</developerConnection>
+        <connection>scm:git:ssh://git@github.com/yusiwen/maven-build-helper.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/yusiwen/maven-build-helper.git</developerConnection>
         <url>https://github.com/yusiwen/maven-build-helper</url>
         <tag>HEAD</tag>
     </scm>
