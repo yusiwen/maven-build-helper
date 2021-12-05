@@ -6,10 +6,6 @@
         <Method name="~(get.*|set.*)"/>
     </Match>
 
-    <!--忽略下列所有pattern -->
-    <Match>
-        <Bug pattern="BC_UNCONFIRMED_CAST,URF_UNREAD_FIELD,DM_BOXED_PRIMITIVE_FOR_PARSING,DM_DEFAULT_ENCODING,RV_RETURN_VALUE_IGNORED_NO_SIDE_EFFECT,REC_CATCH_EXCEPTION,OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE,NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE,DMI_RANDOM_USED_ONLY_ONCE"/>
-    </Match>
     <!--
     Exposing internal representation by getting/setting mutable fields.
     We often intentionally break this rule for performance.
