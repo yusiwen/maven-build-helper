@@ -4,7 +4,7 @@
 
     <groupId>cn.yusiwen</groupId>
     <artifactId>maven-build-helper</artifactId>
-    <version>1.2-SNAPSHOT</version>
+    <version>1.2</version>
 
     <name>Maven Build Helper</name>
     <description>My maven build helper for formatting, checkstyle, spotbugs</description>
@@ -21,7 +21,7 @@
         <connection>scm:git:ssh://git@github.com/yusiwen/maven-build-helper.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/yusiwen/maven-build-helper.git</developerConnection>
         <url>https://github.com/yusiwen/maven-build-helper</url>
-        <tag>HEAD</tag>
+        <tag>v1.2</tag>
     </scm>
 
     <developers>
