@@ -6,6 +6,8 @@
     <!--默认error等级 -->
     <property name="severity" value="error"/>
     <property name="charset" value="UTF-8"/>
+    <property name="localeLanguage" value="en" />
+    <property name="localeCountry" value="US" />
 
     <!-- 文件长度不超过2000行 -->
     <module name="FileLength">
