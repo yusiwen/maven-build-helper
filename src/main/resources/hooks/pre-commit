@@ -1,3 +1,7 @@
 #!/usr/bin/env bash
 
-mvn formatter:format
+echo "pre-commit: ------------------------------------------------------------"
+printf "Starting format code files..."
+mvn -q formatter:format impsort:sort whitespace:trim xml-format:xml-format
+printf "done\n"
+echo "------------------------------------------------------------------------"
