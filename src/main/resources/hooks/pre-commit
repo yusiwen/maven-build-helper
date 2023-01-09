@@ -2,6 +2,8 @@
 
 echo "pre-commit: ------------------------------------------------------------"
 printf "Starting format code files..."
+FILES=$(git diff --cached --name-only --diff-filter=ACMR | sed 's| |\\ |g')
 mvn -q formatter:format impsort:sort whitespace:trim xml-format:xml-format
+echo "$FILES" | xargs git add
 printf "done\n"
 echo "------------------------------------------------------------------------"
