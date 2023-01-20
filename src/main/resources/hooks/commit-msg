@@ -5,8 +5,7 @@ convetional_commit_regex="(^(\[maven-.*\] )|^((release|build|chore|ci|docs|feat|
 
 # Get the commit message (the parameter we're given is just the path to the
 # temporary file which holds the message).
-# commit_message=$(cat "$1")
-commit_message="$1"
+commit_message=$(cat "$1")
 
 # Check the message, if we match, all good baby.
 if [[ "$commit_message" =~ $convetional_commit_regex ]]; then
