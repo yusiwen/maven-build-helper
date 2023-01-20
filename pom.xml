@@ -4,7 +4,7 @@
 
     <groupId>cn.yusiwen</groupId>
     <artifactId>maven-build-helper</artifactId>
-    <version>1.5.0</version>
+    <version>1.5.1-SNAPSHOT</version>
 
     <name>maven-build-helper</name>
     <description>Build helper for my maven projects</description>
@@ -30,7 +30,7 @@
         <connection>scm:git:ssh://git@github.com/yusiwen/maven-build-helper.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/yusiwen/maven-build-helper.git</developerConnection>
         <url>https://github.com/yusiwen/maven-build-helper</url>
-        <tag>v1.5.0</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <issueManagement>
