@@ -3,6 +3,12 @@
 set -e
 set -o pipefail
 
+# skip commit in post-commit hook
+args=$(ps -f -p $PPID)
+if echo "$args" | grep --quiet -- '--no-verify'; then
+  exit 0
+fi
+
 function get_repo_root() {
   git rev-parse --show-toplevel
 }
