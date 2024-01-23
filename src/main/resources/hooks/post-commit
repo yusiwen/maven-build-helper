@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+
+set -e
+set -o pipefail
+
+function get_repo_root() {
+  git rev-parse --show-toplevel
+}
+
+if ! type mvn >/dev/null 2>&1; then
+  exit 0
+fi
+
+echo "post-commit: ------------------------------------------------------------"
+printf "Starting format code files...\n"
+
+stash_dirty_files=0
+if git status --porcelain -s -uall | grep -q -v '^M'; then
+  printf "Stashing unstaged and untracked files first...\n"
+  git stash push -u -k -m 'pre-commit hook stash for formatting code'
+  stash_dirty_files=1
+fi
+
+if [ -e "$(get_repo_root)/pom.xml" ]; then
+  mvn -q formatter:format impsort:sort whitespace:trim xml-format:xml-format
+fi
+
+if [ -n "$(git status -s -uall)" ]; then
+  git add . && git commit --no-verify -m 'chore: [post-commit]auto format'
+fi
+
+if [ $stash_dirty_files -eq 1 ]; then
+  git stash pop
+fi
+
+printf "done\n"
+echo "------------------------------------------------------------------------"
