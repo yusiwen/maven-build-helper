@@ -4,7 +4,7 @@
 
     <groupId>cn.yusiwen</groupId>
     <artifactId>maven-build-helper</artifactId>
-    <version>1.5.1-SNAPSHOT</version>
+    <version>1.5.1</version>
 
     <name>maven-build-helper</name>
     <description>Build helper for my maven projects</description>
