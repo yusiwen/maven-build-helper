@@ -30,7 +30,7 @@
         <connection>scm:git:ssh://git@github.com/yusiwen/maven-build-helper.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/yusiwen/maven-build-helper.git</developerConnection>
         <url>https://github.com/yusiwen/maven-build-helper</url>
-        <tag>v1.5.1</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <issueManagement>
