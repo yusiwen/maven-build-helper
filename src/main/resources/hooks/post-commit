@@ -17,6 +17,10 @@ if ! type mvn >/dev/null 2>&1; then
   exit 0
 fi
 
+if [ ! -f "$(get_repo_root)/pom.xml" ] || [ ! -f "$(get_repo_root)/.format" ]; then
+  exit 0
+fi
+
 echo "post-commit: ------------------------------------------------------------"
 printf "Starting format code files...\n"
 
@@ -27,9 +31,7 @@ if git status --porcelain -s -uall | grep -q -v '^M'; then
   stash_dirty_files=1
 fi
 
-if [ -e "$(get_repo_root)/pom.xml" ]; then
-  mvn -q formatter:format impsort:sort whitespace:trim xml-format:xml-format
-fi
+mvn -q formatter:format impsort:sort whitespace:trim xml-format:xml-format
 
 if [ -n "$(git status -s -uall)" ]; then
   git add . && git commit --no-verify -m 'chore: [post-commit]auto format'
